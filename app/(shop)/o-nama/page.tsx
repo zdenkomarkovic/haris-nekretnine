@@ -32,8 +32,8 @@ export default function ONamaPage() {
       {/* Hero */}
       <section className="bg-green-950 text-white py-20 px-4 text-center">
         <div className="max-w-2xl mx-auto space-y-4">
-          <p className="text-sm uppercase tracking-widest text-[#C9A227] font-medium">O nama</p>
-          <h1 className="text-3xl md:text-4xl font-bold text-[#C9A227]">Haris Nekretnine</h1>
+          <p className="text-sm uppercase tracking-widest text-[#D4AF37] font-medium">O nama</p>
+          <h1 className="text-3xl md:text-4xl font-bold text-[#D4AF37]">Haris Nekretnine</h1>
           <p className="text-green-200 leading-relaxed">
             Moderan brend posvećen profesionalnoj prezentaciji nekretnina kroz fotografiju,
             video produkciju, digitalni marketing i promociju na savremenim online kanalima.
@@ -63,7 +63,7 @@ export default function ONamaPage() {
           proces informisanja o tržištu nekretnina učinimo jednostavnijim, transparentnijim
           i dostupnijim svima.
         </p>
-        <p className="text-green-900 font-semibold text-lg border-l-4 border-[#C9A227] pl-4">
+        <p className="text-green-900 font-semibold text-lg border-l-4 border-[#D4AF37] pl-4">
           Haris Nekretnine — mesto gde nekretnine dobijaju prezentaciju kakvu zaslužuju.
         </p>
       </section>
@@ -98,7 +98,7 @@ export default function ONamaPage() {
             </Link>
             <Link
               href="/nekretnine"
-              className="px-6 py-3 border border-[#C9A227] text-[#C9A227] font-semibold rounded-lg hover:bg-[#C9A227] hover:text-green-950 transition-colors"
+              className="px-6 py-3 border border-[#D4AF37] text-[#D4AF37] font-semibold rounded-lg hover:bg-[#D4AF37] hover:text-green-950 transition-colors"
             >
               Pogledaj nekretnine
             </Link>

@@ -39,8 +39,8 @@ export default function KontaktPage() {
       {/* Hero */}
       <section className="bg-green-950 text-white py-16 px-4 text-center">
         <div className="max-w-xl mx-auto space-y-3">
-          <p className="text-xs uppercase tracking-widest text-[#C9A227] font-medium">Kontakt</p>
-          <h1 className="text-3xl md:text-4xl font-bold text-[#C9A227]">Stupite u kontakt</h1>
+          <p className="text-xs uppercase tracking-widest text-[#D4AF37] font-medium">Kontakt</p>
+          <h1 className="text-3xl md:text-4xl font-bold text-[#D4AF37]">Stupite u kontakt</h1>
           <p className="text-gray-300 text-sm">
             Tu smo da odgovorimo na sva vaša pitanja o nekretninama i uslugama.
           </p>
@@ -58,7 +58,7 @@ export default function KontaktPage() {
                 href="tel:+38165277705"
                 className="flex items-center gap-4 group"
               >
-                <div className="w-11 h-11 rounded-full bg-green-900 text-white flex items-center justify-center flex-shrink-0 group-hover:bg-[#C9A227] transition-colors">
+                <div className="w-11 h-11 rounded-full bg-green-900 text-white flex items-center justify-center flex-shrink-0 group-hover:bg-[#D4AF37] transition-colors">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.37 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
                   </svg>
@@ -73,7 +73,7 @@ export default function KontaktPage() {
                 href="mailto:haris@berries.rs"
                 className="flex items-center gap-4 group"
               >
-                <div className="w-11 h-11 rounded-full bg-green-900 text-white flex items-center justify-center flex-shrink-0 group-hover:bg-[#C9A227] transition-colors">
+                <div className="w-11 h-11 rounded-full bg-green-900 text-white flex items-center justify-center flex-shrink-0 group-hover:bg-[#D4AF37] transition-colors">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                     <polyline points="22,6 12,12 2,6" />
@@ -99,7 +99,7 @@ export default function KontaktPage() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 group"
                 >
-                  <div className="w-11 h-11 rounded-full bg-green-900 text-white flex items-center justify-center flex-shrink-0 group-hover:bg-[#C9A227] transition-colors">
+                  <div className="w-11 h-11 rounded-full bg-green-900 text-white flex items-center justify-center flex-shrink-0 group-hover:bg-[#D4AF37] transition-colors">
                     {s.icon}
                   </div>
                   <span className="font-medium text-gray-800 group-hover:text-green-900 transition-colors">{s.label}</span>

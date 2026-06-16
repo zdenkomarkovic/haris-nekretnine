@@ -7,7 +7,7 @@ export default function FavoritesLink() {
   const { ids } = useFavorites()
 
   return (
-    <Link href="/omiljene" className="relative hover:text-[#C9A227] [text-underline-offset:12px] hover:underline flex items-center gap-1.5 transition-colors">
+    <Link href="/omiljene" className="relative hover:text-[#D4AF37] [text-underline-offset:12px] hover:underline flex items-center gap-1.5 transition-colors">
       <svg
         width="16"
         height="16"

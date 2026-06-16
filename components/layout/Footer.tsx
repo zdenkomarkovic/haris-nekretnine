@@ -18,7 +18,7 @@ export default function Footer() {
                 height={144}
                 className="h-32 w-auto object-contain"
               />
-              <span className="text-[#C9A227] font-bold text-xl leading-tight">
+              <span className="text-[#D4AF37] font-bold text-xl leading-tight">
                 Haris<br />Nekretnine
               </span>
             </div>
@@ -28,18 +28,18 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-semibold text-[#C9A227] mb-4">Navigacija</h3>
+            <h3 className="font-semibold text-[#D4AF37] mb-4">Navigacija</h3>
             <nav className="flex flex-col gap-2 text-sm text-gray-300">
-              <Link href="/nekretnine" className="hover:text-[#C9A227] transition-colors">Sve nekretnine</Link>
-              <Link href="/oblasti" className="hover:text-[#C9A227] transition-colors">Oblasti</Link>
-              <Link href="/tipovi" className="hover:text-[#C9A227] transition-colors">Tipovi</Link>
-              <Link href="/o-nama" className="hover:text-[#C9A227] transition-colors">O nama</Link>
-              <Link href="/kontakt" className="hover:text-[#C9A227] transition-colors">Kontakt</Link>
+              <Link href="/nekretnine" className="hover:text-[#D4AF37] transition-colors">Sve nekretnine</Link>
+              <Link href="/oblasti" className="hover:text-[#D4AF37] transition-colors">Oblasti</Link>
+              <Link href="/tipovi" className="hover:text-[#D4AF37] transition-colors">Tipovi</Link>
+              <Link href="/o-nama" className="hover:text-[#D4AF37] transition-colors">O nama</Link>
+              <Link href="/kontakt" className="hover:text-[#D4AF37] transition-colors">Kontakt</Link>
             </nav>
           </div>
 
           <div>
-            <h3 className="font-semibold text-[#C9A227] mb-4">Fokus oblasti</h3>
+            <h3 className="font-semibold text-[#D4AF37] mb-4">Fokus oblasti</h3>
             <p className="text-sm text-gray-300 leading-relaxed">
               Zlatiborski okrug<br />
               Prijepolje · Zlatibor · Zlatar<br />
@@ -56,7 +56,7 @@ export default function Footer() {
               href="https://manikamwebsolutions.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-[#C9A227] transition-colors"
+              className="hover:text-[#D4AF37] transition-colors"
             >
               Manikam Web Solutions
             </a>

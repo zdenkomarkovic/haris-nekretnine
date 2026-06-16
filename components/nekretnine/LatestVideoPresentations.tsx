@@ -60,7 +60,7 @@ export default function LatestVideoPresentations({ nekretnine }: { nekretnine: N
             <div className="absolute inset-0 flex items-center justify-center">
               <div
                 className="w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-colors"
-                style={{ backgroundColor: '#C9A227' }}
+                style={{ backgroundColor: '#D4AF37' }}
               >
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="white">
                   <path d="M8 5v14l11-7z" />

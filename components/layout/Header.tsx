@@ -19,22 +19,22 @@ export default async function Header() {
             className="h-11 w-auto object-contain"
             priority
           />
-          <span className="text-[#C9A227] font-semibold text-lg leading-tight tracking-tight">
+          <span className="text-[#D4AF37] font-semibold text-lg leading-tight tracking-tight">
             Haris Nekretnine
           </span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-6 text-sm text-white">
-          <Link href="/" className="hover:text-[#C9A227] transition-colors [text-underline-offset:12px] hover:underline">Početna</Link>
+          <Link href="/" className="hover:text-[#D4AF37] transition-colors [text-underline-offset:12px] hover:underline">Početna</Link>
           {oblasti.length > 0 && (
-            <Link href="/oblasti" className="hover:text-[#C9A227] transition-colors [text-underline-offset:12px] hover:underline">Oblasti</Link>
+            <Link href="/oblasti" className="hover:text-[#D4AF37] transition-colors [text-underline-offset:12px] hover:underline">Oblasti</Link>
           )}
           {tipovi.length > 0 && (
-            <Link href="/tipovi" className="hover:text-[#C9A227] transition-colors [text-underline-offset:12px] hover:underline">Tipovi</Link>
+            <Link href="/tipovi" className="hover:text-[#D4AF37] transition-colors [text-underline-offset:12px] hover:underline">Tipovi</Link>
           )}
-          <Link href="/nekretnine" className="hover:text-[#C9A227] transition-colors [text-underline-offset:12px] hover:underline">Sve nekretnine</Link>
-          <Link href="/o-nama" className="hover:text-[#C9A227] transition-colors [text-underline-offset:12px] hover:underline">O nama</Link>
-          <Link href="/kontakt" className="hover:text-[#C9A227] transition-colors [text-underline-offset:12px] hover:underline">Kontakt</Link>
+          <Link href="/nekretnine" className="hover:text-[#D4AF37] transition-colors [text-underline-offset:12px] hover:underline">Sve nekretnine</Link>
+          <Link href="/o-nama" className="hover:text-[#D4AF37] transition-colors [text-underline-offset:12px] hover:underline">O nama</Link>
+          <Link href="/kontakt" className="hover:text-[#D4AF37] transition-colors [text-underline-offset:12px] hover:underline">Kontakt</Link>
           <FavoritesLink />
         </nav>
 

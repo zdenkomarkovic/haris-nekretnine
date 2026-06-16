@@ -1,7 +1,7 @@
 @import "tailwindcss" layer(tailwind-base);
 
 @theme {
-  --color-gold: #C9A227;
-  --color-gold-light: #e0b940;
-  --color-gold-dark: #a8861f;
+  --color-gold: #D4AF37;
+  --color-gold-light: #E8C84A;
+  --color-gold-dark: #B8960C;
 }

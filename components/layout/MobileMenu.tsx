@@ -31,16 +31,16 @@ export default function MobileMenu({ showOblasti, showTipovi }: Props) {
       {open && (
         <div className="md:hidden absolute top-16 left-0 right-0 bg-green-900 border-b border-green-800 shadow-lg z-50">
           <nav className="max-w-6xl mx-auto px-4 py-5 flex flex-col gap-4 text-sm text-white">
-            <Link href="/" className="hover:text-[#C9A227] transition-colors">Početna</Link>
+            <Link href="/" className="hover:text-[#D4AF37] transition-colors">Početna</Link>
             {showOblasti && (
-              <Link href="/oblasti" className="hover:text-[#C9A227] transition-colors">Oblasti</Link>
+              <Link href="/oblasti" className="hover:text-[#D4AF37] transition-colors">Oblasti</Link>
             )}
             {showTipovi && (
-              <Link href="/tipovi" className="hover:text-[#C9A227] transition-colors">Tipovi</Link>
+              <Link href="/tipovi" className="hover:text-[#D4AF37] transition-colors">Tipovi</Link>
             )}
-            <Link href="/nekretnine" className="hover:text-[#C9A227] transition-colors">Sve nekretnine</Link>
-            <Link href="/o-nama" className="hover:text-[#C9A227] transition-colors">O nama</Link>
-            <Link href="/kontakt" className="hover:text-[#C9A227] transition-colors">Kontakt</Link>
+            <Link href="/nekretnine" className="hover:text-[#D4AF37] transition-colors">Sve nekretnine</Link>
+            <Link href="/o-nama" className="hover:text-[#D4AF37] transition-colors">O nama</Link>
+            <Link href="/kontakt" className="hover:text-[#D4AF37] transition-colors">Kontakt</Link>
             <FavoritesLink />
           </nav>
         </div>
