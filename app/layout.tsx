@@ -1,6 +1,19 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { SITE_NAME, SITE_URL } from '@/lib/constants'
+import { Cormorant_Garamond, Montserrat } from 'next/font/google'
+
+const cormorant = Cormorant_Garamond({
+  subsets: ['latin'],
+  weight: ['300', '400', '600', '700'],
+  variable: '--font-cormorant',
+})
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-montserrat',
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -22,8 +35,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="sr">
-      <body>{children}</body>
+    <html lang="sr" className={`${cormorant.variable} ${montserrat.variable}`}>
+      <body className="font-[family-name:var(--font-montserrat)]">{children}</body>
     </html>
   )
 }

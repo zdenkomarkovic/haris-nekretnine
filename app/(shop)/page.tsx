@@ -21,40 +21,148 @@ export default async function HomePage() {
   return (
     <main>
       {/* Hero */}
-      <section className="relative text-white py-28 px-4 overflow-hidden">
+      <section className="relative text-white h-[calc(100vh-4rem)] overflow-hidden flex flex-col">
         {/* Background image */}
         <img
-          src="/20251119_174201.jpg"
+          src="/hero.png"
           alt=""
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover object-center"
         />
-        {/* Dark green overlay */}
-        <div className="absolute inset-0 bg-green-950/75" />
+        {/* Gradient overlay — darker left, fades right */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-black/20 to-black/0" />
 
-        <div className="relative max-w-3xl mx-auto text-center space-y-6">
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight drop-shadow-lg text-[#D4AF37]">
-            Haris Nekretnine INVEST & RENT
-          </h1>
-          <p className="text-lg md:text-xl font-medium leading-relaxed text-white drop-shadow">
-            Profesionalna prezentacija nekretnina kroz fotografiju, video sadržaj i digitalni
-            marketing.
-          </p>
-          <p className="text-white text-sm">
-            Specijalizovani za Zlatiborski okrug i atraktivne lokacije širom Srbije
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
-            <Link
-              href="/nekretnine"
-              className="px-6 py-3 bg-[#D4AF37] text-green-950 font-semibold rounded-lg hover:bg-[#E8C84A] transition-colors"
-            >
-              Pogledaj nekretnine
-            </Link>
-            <Link
-              href="/kontakt"
-              className="px-6 py-3 border border-white/50 text-white rounded-lg hover:border-[#D4AF37] hover:text-[#D4AF37] transition-colors"
-            >
-              Kontaktirajte nas
-            </Link>
+        {/* Main content */}
+        <div className="relative flex-1 flex flex-col">
+          <div className="max-w-6xl mx-auto w-full px-4 flex-1 flex flex-col py-8">
+            {/* Logo */}
+            <div className="mb-auto">
+              <img src="/logo (2).png" alt="Haris Nekretnine" className="h-56 w-auto" />
+            </div>
+
+            {/* Heading + CTA */}
+            <div className="flex-1 flex flex-col justify-end pb-10 max-w-xl">
+              <h1 className="font-heading font-light text-3xl md:text-4xl lg:text-5xl leading-tight mb-4">
+                Vaša nekretnina.
+                <br />
+                Naš <span className="text-[#D4AF37] font-semibold">profesionalni</span> pristup.
+              </h1>
+              {/* Gold divider */}
+              <div className="w-10 h-px bg-[#D4AF37] mb-4" />
+              <p className="text-white/75 text-sm md:text-base mb-7 leading-relaxed">
+                Prezentujemo nekretnine u ime vlasnika
+                <br />
+                sa diskrecijom i posvećenošću.
+              </p>
+              <Link
+                href="/kontakt"
+                className="inline-block w-fit px-7 py-3 bg-[#D4AF37] text-white text-xs font-body font-semibold tracking-[0.2em] uppercase hover:bg-[#B8960C] transition-colors"
+              >
+                Predstavite svoju nekretninu
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom features bar */}
+        <div className="relative pb-6">
+          <div className="max-w-6xl mx-auto px-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10 bg-black/75 border border-white/10">
+              {/* Prezentacija */}
+              <div className="flex flex-col items-center text-center px-4 py-6 gap-2">
+                <svg
+                  className="text-[#D4AF37] w-7 h-7 mb-1"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M2.25 12l8.954-8.955a1.126 1.126 0 0 1 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+                  />
+                </svg>
+                <p className="text-white text-xs font-bold tracking-widest">
+                  PREZENTACIJA
+                  <br />
+                  NEKRETNINA
+                </p>
+                <p className="text-white/55 text-xs leading-relaxed">
+                  Ističemo najbolje osobine Vaše nekretnine
+                </p>
+              </div>
+              {/* Diskrecija */}
+              <div className="flex flex-col items-center text-center px-4 py-6 gap-2">
+                <svg
+                  className="text-[#D4AF37] w-7 h-7 mb-1"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"
+                  />
+                </svg>
+                <p className="text-white text-xs font-bold tracking-widest">
+                  DISKRECIJA
+                  <br />I POVERENJE
+                </p>
+                <p className="text-white/55 text-xs leading-relaxed">
+                  Profesionalno i poverljivo zastupamo Vaše interese
+                </p>
+              </div>
+              {/* Posvećenost */}
+              <div className="flex flex-col items-center text-center px-4 py-6 gap-2">
+                <svg
+                  className="text-[#D4AF37] w-7 h-7 mb-1"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z"
+                  />
+                </svg>
+                <p className="text-white text-xs font-bold tracking-widest">
+                  POSVEĆENOST
+                  <br />
+                  VLASNICIMA
+                </p>
+                <p className="text-white/55 text-xs leading-relaxed">
+                  Vaše ciljeve stavljamo na prvo mesto
+                </p>
+              </div>
+              {/* Partnerstvo */}
+              <div className="flex flex-col items-center text-center px-4 py-6 gap-2">
+                <svg
+                  className="text-[#D4AF37] w-7 h-7 mb-1"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M10.05 4.575a1.575 1.575 0 1 0-3.15 0v3m3.15-3v-1.5a1.575 1.575 0 0 1 3.15 0v1.5m-3.15 0 .075 5.925m3.075.75V4.575m0 0a1.575 1.575 0 0 1 3.15 0V15M6.9 7.575a1.575 1.575 0 1 0-3.15 0v8.175a6.75 6.75 0 0 0 6.75 6.75h2.018a5.25 5.25 0 0 0 3.712-1.538l1.732-1.732a5.25 5.25 0 0 0 1.538-3.712l.003-2.024a.668.668 0 0 1 .198-.471 1.575 1.575 0 1 0-2.228-2.228 3.818 3.818 0 0 0-1.12 2.687M6.9 7.575V12m6.27 4.318A4.49 4.49 0 0 1 16.35 15m.002 0h-.002"
+                  />
+                </svg>
+                <p className="text-white text-xs font-bold tracking-widest">
+                  PARTNERSTVO
+                  <br />
+                  KOJE TRAJE
+                </p>
+                <p className="text-white/55 text-xs leading-relaxed">
+                  Dugoročna saradnja zasnovana na poverenju
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

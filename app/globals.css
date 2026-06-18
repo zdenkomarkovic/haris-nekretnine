@@ -4,4 +4,6 @@
   --color-gold: #D4AF37;
   --color-gold-light: #E8C84A;
   --color-gold-dark: #B8960C;
+  --font-heading: var(--font-cormorant), Georgia, serif;
+  --font-body: var(--font-montserrat), system-ui, sans-serif;
 }
