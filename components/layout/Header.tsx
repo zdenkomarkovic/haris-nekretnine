@@ -19,8 +19,13 @@ export default async function Header() {
             className="h-11 w-auto object-contain"
             priority
           />
-          <span className="text-[#D4AF37] font-semibold text-lg leading-tight tracking-tight">
+          <span className="text-[#D4AF37] font-semibold text-lg leading-tight tracking-tight uppercase flex flex-col items-center">
             Haris Nekretnine
+            <span className="text-xs font-normal tracking-widest flex items-center gap-1">
+              <span>—</span>
+              <span>invest &amp; rent</span>
+              <span>—</span>
+            </span>
           </span>
         </Link>
 

@@ -3,6 +3,7 @@ import TipList from "@/components/shop/CategoryList";
 import OblastList from "@/components/shop/OblastList";
 import PaginatedPropertyGrid from "@/components/shop/PaginatedPropertyGrid";
 import HomepageVideos from "@/components/nekretnine/HomepageVideos";
+import TypewriterText from "@/components/nekretnine/TypewriterText";
 import {
   getIstaknuteNekretnine,
   getAllTipovi,
@@ -36,29 +37,74 @@ export default async function HomePage() {
           <div className="max-w-6xl mx-auto w-full px-4 flex-1 flex flex-col py-4 md:py-8">
             {/* Logo */}
             <div className="mb-auto">
-              <img src="/logo (2).png" alt="Haris Nekretnine" className="h-28 md:h-56 w-auto" />
+              <div className="flex flex-col items-center w-fit">
+                <img src="/logo.png" alt="Haris Nekretnine" className="h-16 md:h-32 w-auto" />
+                <h1 className="text-[#D4AF37] font-semibold uppercase tracking-tight mt-3 leading-tight text-center">
+                  <span className="text-xl md:text-2xl block">Haris Nekretnine</span>
+                  <span className="text-sm font-normal tracking-widest block">
+                    — invest &amp; rent —
+                  </span>
+                  <span className="text-sm font-normal tracking-widest block">
+                    — prijepolje zlatibor —
+                  </span>
+                </h1>
+              </div>
             </div>
 
             {/* Heading + CTA */}
-            <div className="flex-1 flex flex-col justify-end pb-10 max-w-xl">
-              <h1 className="font-heading font-light text-3xl md:text-4xl lg:text-5xl leading-tight mb-4">
-                Vaša nekretnina.
-                <br />
-                Naš <span className="text-[#D4AF37] font-semibold">profesionalni</span> pristup.
-              </h1>
-              {/* Gold divider */}
-              <div className="w-10 h-px bg-[#D4AF37] mb-4" />
-              <p className="text-white/75 text-sm md:text-base mb-7 leading-relaxed">
-                Prezentujemo nekretnine u ime vlasnika
-                <br />
-                sa diskrecijom i posvećenošću.
+            <div className="flex-1 flex flex-col justify-end pb-10 max-w-3xl">
+              <p className="font-heading font-light text-4xl md:text-5xl lg:text-6xl leading-tight mb-4">
+                <TypewriterText />
               </p>
-              <Link
-                href="/kontakt"
-                className="inline-block w-fit px-4 py-2 md:px-7 md:py-3 bg-[#D4AF37] text-white text-[10px] md:text-xs font-body font-semibold tracking-[0.15em] uppercase hover:bg-[#B8960C] transition-colors"
-              >
-                Predstavite svoju nekretninu
-              </Link>
+              {/* Gold divider */}
+              <div className="w-16 h-px bg-[#D4AF37] mb-4" />
+              <p className="text-white/75 text-base md:text-lg mb-7 leading-relaxed">
+                Prava prezentacija je prvi korak do{" "}
+                <span className="text-[#D4AF37]">uspešne i brze prodaje.</span>
+              </p>
+              <div className="flex flex-col gap-2 text-base text-white/80">
+                <a
+                  href="tel:+38165277705"
+                  className="flex items-center gap-2 hover:text-[#D4AF37] transition-colors"
+                >
+                  <span className="flex items-center justify-center w-8 h-8 rounded-full border border-[#D4AF37] text-[#D4AF37] shrink-0">
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z" />
+                    </svg>
+                  </span>
+                  +381 65 277 705
+                </a>
+                <a
+                  href="mailto:haris@berries.rs"
+                  className="flex items-center gap-2 hover:text-[#D4AF37] transition-colors"
+                >
+                  <span className="flex items-center justify-center w-8 h-8 rounded-full border border-[#D4AF37] text-[#D4AF37] shrink-0">
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <rect width="20" height="16" x="2" y="4" rx="2" />
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                    </svg>
+                  </span>
+                  haris@berries.rs
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -270,7 +316,7 @@ export default async function HomePage() {
           {/* Slika */}
           <div className="rounded-2xl overflow-hidden shadow-lg">
             <img
-              src="/SnapInsta.to_625683242_17842477482688725_4996940228100488877_n_750.jpg"
+              src="/o nama.jpg"
               alt="Haris Nekretnine"
               className="max-h-120 w-auto mx-auto block"
             />
