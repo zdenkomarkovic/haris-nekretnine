@@ -34,11 +34,11 @@ export default async function HomePage() {
 
         {/* Main content */}
         <div className="relative flex-1 flex flex-col">
-          <div className="max-w-6xl mx-auto w-full px-4 flex-1 flex flex-col py-4 md:py-8">
+          <div className="max-w-6xl mx-auto w-full px-4 flex-1 flex flex-col py-4">
             {/* Logo */}
             <div className="mb-auto">
               <div className="flex flex-col items-center w-fit">
-                <img src="/logo.png" alt="Haris Nekretnine" className="h-16 md:h-32 w-auto" />
+                <img src="/logo.png" alt="Haris Nekretnine" className="h-12 md:h-24 w-auto" />
                 <h1 className="text-[#D4AF37] font-semibold uppercase tracking-tight mt-3 leading-tight text-center">
                   <span className="text-xl md:text-2xl block">Haris Nekretnine</span>
                   <span className="text-sm font-normal tracking-widest block">
@@ -52,13 +52,13 @@ export default async function HomePage() {
             </div>
 
             {/* Heading + CTA */}
-            <div className="flex-1 flex flex-col justify-end pb-10 max-w-3xl">
-              <p className="font-heading font-light text-4xl md:text-5xl lg:text-6xl leading-tight mb-4">
+            <div className="flex-1 flex flex-col justify-end pb-8 md:pb-0 max-w-3xl">
+              <p className="font-heading font-light text-4xl md:text-5xl lg:text-6xl leading-none mb-4">
                 <TypewriterText />
               </p>
               {/* Gold divider */}
               <div className="w-16 h-px bg-[#D4AF37] mb-4" />
-              <p className="text-white/75 text-base md:text-lg mb-7 leading-relaxed">
+              <p className="text-white/75 text-base md:text-lg mb-4 leading-relaxed">
                 Prava prezentacija je prvi korak do{" "}
                 <span className="text-[#D4AF37]">uspešne i brze prodaje.</span>
               </p>
@@ -114,7 +114,7 @@ export default async function HomePage() {
           <div className="max-w-6xl mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10 bg-black/75 border border-white/10">
               {/* Prezentacija */}
-              <div className="flex flex-col items-center text-center px-3 py-3 md:py-6 gap-1 md:gap-2">
+              <div className="flex flex-col items-center text-center px-3 py-2 md:py-4 gap-1 md:gap-1">
                 <svg
                   className="text-[#D4AF37] w-7 h-7 mb-1"
                   fill="none"
@@ -138,7 +138,7 @@ export default async function HomePage() {
                 </p>
               </div>
               {/* Diskrecija */}
-              <div className="flex flex-col items-center text-center px-3 py-3 md:py-6 gap-1 md:gap-2">
+              <div className="flex flex-col items-center text-center px-3 py-2 md:py-4 gap-1 md:gap-1">
                 <svg
                   className="text-[#D4AF37] w-7 h-7 mb-1"
                   fill="none"
@@ -161,7 +161,7 @@ export default async function HomePage() {
                 </p>
               </div>
               {/* Posvećenost */}
-              <div className="flex flex-col items-center text-center px-3 py-3 md:py-6 gap-1 md:gap-2">
+              <div className="flex flex-col items-center text-center px-3 py-2 md:py-4 gap-1 md:gap-1">
                 <svg
                   className="text-[#D4AF37] w-7 h-7 mb-1"
                   fill="none"
@@ -185,7 +185,7 @@ export default async function HomePage() {
                 </p>
               </div>
               {/* Partnerstvo */}
-              <div className="flex flex-col items-center text-center px-3 py-3 md:py-6 gap-1 md:gap-2">
+              <div className="flex flex-col items-center text-center px-3 py-2 md:py-4 gap-1 md:gap-1">
                 <svg
                   className="text-[#D4AF37] w-7 h-7 mb-1"
                   fill="none"
