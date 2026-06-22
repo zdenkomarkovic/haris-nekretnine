@@ -1,3 +1,5 @@
+export const revalidate = 60
+
 import { getAllTipovi } from '@/lib/sanity/queries'
 import TipList from '@/components/shop/CategoryList'
 

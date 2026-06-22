@@ -1,3 +1,5 @@
+export const revalidate = 60
+
 import { getAllOblasti } from '@/lib/sanity/queries'
 import OblastList from '@/components/shop/OblastList'
 

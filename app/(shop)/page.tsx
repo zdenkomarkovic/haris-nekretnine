@@ -1,3 +1,5 @@
+export const revalidate = 60
+
 import Link from "next/link";
 import TipList from "@/components/shop/CategoryList";
 import OblastList from "@/components/shop/OblastList";
