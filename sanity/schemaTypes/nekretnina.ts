@@ -135,6 +135,18 @@ export const nekretnineType = defineType({
       validation: (r) => r.positive(),
     }),
     defineField({
+      name: 'brTerasa',
+      title: 'Broj terasa',
+      type: 'number',
+      validation: (r) => r.positive(),
+    }),
+    defineField({
+      name: 'parkingMesta',
+      title: 'Broj parking mesta',
+      type: 'number',
+      validation: (r) => r.positive(),
+    }),
+    defineField({
       name: 'energetskaKlasa',
       title: 'Energetska klasa',
       type: 'string',
@@ -164,20 +176,7 @@ export const nekretnineType = defineType({
       name: 'spratnost',
       title: 'Spratnost',
       type: 'string',
-      options: {
-        list: [
-          { title: 'Prizemlje', value: 'prizemlje' },
-          { title: '1. sprat', value: '1-sprat' },
-          { title: '2. sprat', value: '2-sprat' },
-          { title: '3. sprat', value: '3-sprat' },
-          { title: '4. sprat', value: '4-sprat' },
-          { title: '5. sprat', value: '5-sprat' },
-          { title: '6. sprat', value: '6-sprat' },
-          { title: '7+ sprat', value: '7plus-sprat' },
-          { title: 'Potkrovlje', value: 'potkrovlje' },
-        ],
-        layout: 'dropdown',
-      },
+      placeholder: 'npr. Prizemlje, 1. sprat od 5, Potkrovlje...',
     }),
     defineField({
       name: 'lift',

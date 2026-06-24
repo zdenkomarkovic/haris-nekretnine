@@ -324,12 +324,12 @@ export default async function HomePage() {
               />
             </svg>
             <p className="text-white text-xs font-bold tracking-widest">
-              PARTNERSTVO
+              ODNOS ZASNOVAN
               <br />
-              KOJE TRAJE
+              NA POVERENJU
             </p>
             <p className="text-white/60 text-xs leading-relaxed">
-              Dugoročna saradnja zasnovana na poverenju
+              Otvrena komunikacija, transparentnost i posvećen pristup svakom klijentu
             </p>
           </div>
         </div>

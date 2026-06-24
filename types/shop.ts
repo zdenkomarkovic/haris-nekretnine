@@ -24,6 +24,8 @@ export interface Nekretnina {
   povrsina?: number
   brSoba?: number
   brKupatila?: number
+  brTerasa?: number
+  parkingMesta?: number
   energetskaKlasa?: string
   vrstaGrejanja?: string
   spratnost?: string

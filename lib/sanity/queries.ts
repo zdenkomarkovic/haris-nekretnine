@@ -19,6 +19,8 @@ const nekretnineFields = `
   povrsina,
   brSoba,
   brKupatila,
+  brTerasa,
+  parkingMesta,
   energetskaKlasa,
   vrstaGrejanja,
   spratnost,

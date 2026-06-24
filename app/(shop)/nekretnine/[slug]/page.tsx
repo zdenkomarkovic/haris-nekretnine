@@ -189,7 +189,19 @@ export default async function NekretninaPage({ params }: Props) {
             {nekretnina.spratnost && (
               <div>
                 <p className="text-xs text-gray-400 uppercase tracking-wide">Spratnost</p>
-                <p className="font-medium capitalize">{nekretnina.spratnost.replace(/-/g, '. ').replace('plus', '+')}</p>
+                <p className="font-medium">{nekretnina.spratnost}</p>
+              </div>
+            )}
+            {nekretnina.brTerasa != null && (
+              <div>
+                <p className="text-xs text-gray-400 uppercase tracking-wide">Terase</p>
+                <p className="font-medium">{nekretnina.brTerasa}</p>
+              </div>
+            )}
+            {nekretnina.parkingMesta != null && (
+              <div>
+                <p className="text-xs text-gray-400 uppercase tracking-wide">Parking</p>
+                <p className="font-medium">{nekretnina.parkingMesta} {nekretnina.parkingMesta === 1 ? 'mesto' : 'mesta'}</p>
               </div>
             )}
             {nekretnina.lift != null && (
