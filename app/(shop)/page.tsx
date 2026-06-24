@@ -1,4 +1,4 @@
-export const revalidate = 60
+export const revalidate = 60;
 
 import Link from "next/link";
 import TipList from "@/components/shop/CategoryList";
@@ -25,23 +25,26 @@ export default async function HomePage() {
 
   return (
     <main>
-      <JsonLd data={{
-        "@context": "https://schema.org",
-        "@type": "RealEstateAgent",
-        name: SITE_NAME,
-        url: SITE_URL,
-        telephone: PHONE,
-        email: EMAIL,
-        address: {
-          "@type": "PostalAddress",
-          addressLocality: "Prijepolje",
-          addressRegion: "Zlatiborski okrug",
-          addressCountry: "RS",
-        },
-        areaServed: ["Prijepolje", "Zlatibor", "Zlatar", "Zlatiborski okrug", "Srbija"],
-        sameAs: [INSTAGRAM_URL, FACEBOOK_URL],
-        description: "Profesionalna prezentacija nekretnina kroz fotografiju, video sadržaj i digitalni marketing u Zlatiborskom okrugu i Srbiji.",
-      }} />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "RealEstateAgent",
+          name: SITE_NAME,
+          url: SITE_URL,
+          telephone: PHONE,
+          email: EMAIL,
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Prijepolje",
+            addressRegion: "Zlatiborski okrug",
+            addressCountry: "RS",
+          },
+          areaServed: ["Prijepolje", "Zlatibor", "Zlatar", "Zlatiborski okrug", "Srbija"],
+          sameAs: [INSTAGRAM_URL, FACEBOOK_URL],
+          description:
+            "Profesionalna prezentacija nekretnina kroz fotografiju, video sadržaj i digitalni marketing u Zlatiborskom okrugu i Srbiji.",
+        }}
+      />
 
       {/* Hero */}
       <section className="relative text-white h-[calc(100vh-4rem)] overflow-hidden flex flex-col">
@@ -222,12 +225,12 @@ export default async function HomePage() {
                   />
                 </svg>
                 <p className="text-white text-xs font-bold tracking-widest">
-                  PARTNERSTVO
+                  ODNOS ZASNOVAN
                   <br />
-                  KOJE TRAJE
+                  NA POVERENJU
                 </p>
                 <p className="text-white/55 text-xs leading-relaxed hidden md:block">
-                  Dugoročna saradnja zasnovana na poverenju
+                  Otvrena komunikacija, transparentnost i posvećen pristup svakom klijentu
                 </p>
               </div>
             </div>
