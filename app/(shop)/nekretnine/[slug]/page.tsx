@@ -6,7 +6,9 @@ import { PortableText } from 'next-sanity'
 import type { Metadata } from 'next'
 import { getNekretnineBySlug, getSlicneNekretnine } from '@/lib/sanity/queries'
 import { buildMetadata } from '@/lib/metadata'
-import { SITE_URL } from '@/lib/constants'
+import { SITE_URL, SITE_NAME, PHONE } from '@/lib/constants'
+import { JsonLd } from '@/components/seo/JsonLd'
+import { urlFor } from '@/lib/sanity/image'
 import ProductGallery from '@/components/shop/ProductGallery'
 import ShareButton from '@/components/shop/ShareButton'
 import PropertyGrid from '@/components/shop/ProductGrid'
@@ -58,8 +60,57 @@ export default async function NekretninaPage({ params }: Props) {
     ? await getSlicneNekretnine(nekretnina.tip.slug, slug)
     : []
 
+  const coverImage = nekretnina.slike?.[0]
+    ? urlFor(nekretnina.slike[0].asset).width(1200).height(630).url()
+    : undefined
+
+  const descriptionParts: string[] = [nekretnina.name]
+  if (nekretnina.cena != null) descriptionParts.push(`${nekretnina.cena.toLocaleString('sr-RS')} EUR`)
+  if (nekretnina.lokacija) descriptionParts.push(nekretnina.lokacija)
+  if (nekretnina.povrsina) descriptionParts.push(`${nekretnina.povrsina} m²`)
+
   return (
     <main className="max-w-6xl mx-auto px-4 py-10">
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "RealEstateListing",
+        name: nekretnina.name,
+        description: descriptionParts.join(' — '),
+        url: `${SITE_URL}/nekretnine/${slug}`,
+        ...(coverImage && { image: coverImage }),
+        ...(nekretnina.cena != null && {
+          offers: {
+            "@type": "Offer",
+            price: nekretnina.cena,
+            priceCurrency: "EUR",
+            availability: nekretnina.status === 'dostupno'
+              ? "https://schema.org/InStock"
+              : "https://schema.org/SoldOut",
+          },
+        }),
+        ...(nekretnina.lokacija && {
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: nekretnina.lokacija,
+            addressCountry: "RS",
+          },
+        }),
+        seller: {
+          "@type": "RealEstateAgent",
+          name: SITE_NAME,
+          telephone: PHONE,
+          url: SITE_URL,
+        },
+      }} />
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Početna", item: SITE_URL },
+          { "@type": "ListItem", position: 2, name: "Nekretnine", item: `${SITE_URL}/nekretnine` },
+          ...(nekretnina.tip ? [{ "@type": "ListItem", position: 3, name: nekretnina.tip.name, item: `${SITE_URL}/tipovi/${nekretnina.tip.slug}` }, { "@type": "ListItem", position: 4, name: nekretnina.name }] : [{ "@type": "ListItem", position: 3, name: nekretnina.name }]),
+        ],
+      }} />
       <nav className="text-sm text-gray-400 mb-8 flex items-center gap-2">
         <Link href="/" className="hover:text-black transition-colors">Početna</Link>
         <span>/</span>

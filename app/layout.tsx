@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import { SITE_NAME, SITE_URL } from '@/lib/constants'
+import { SITE_NAME, SITE_URL, SITE_DESCRIPTION } from '@/lib/constants'
 import { Cormorant_Garamond, Montserrat } from 'next/font/google'
 
 const cormorant = Cormorant_Garamond({
@@ -21,12 +21,14 @@ export const metadata: Metadata = {
     default: SITE_NAME,
     template: `%s | ${SITE_NAME}`,
   },
-  description: 'Haris Nekretnine — profesionalna prezentacija nekretnina kroz fotografiju, video sadržaj i digitalni marketing. Zlatiborski okrug i Srbija.',
+  description: SITE_DESCRIPTION,
+  keywords: ['nekretnine', 'Prijepolje', 'Zlatibor', 'Zlatar', 'kupovina nekretnina', 'prodaja nekretnina', 'iznajmljivanje', 'Zlatiborski okrug', 'stanovi', 'kuće', 'placevi'],
   openGraph: {
     type: 'website',
     locale: 'sr_RS',
     url: SITE_URL,
     siteName: SITE_NAME,
+    description: SITE_DESCRIPTION,
   },
   twitter: {
     card: 'summary_large_image',

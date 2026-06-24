@@ -226,3 +226,18 @@ export async function getNekretnineWithVideos(limit = 6): Promise<Nekretnina[]> 
     { limit: limit - 1 }
   )
 }
+
+export async function getAllSlugsForSitemap() {
+  const [nekretnine, oblasti, tipovi] = await Promise.all([
+    sanityClient.fetch<{ slug: string; _updatedAt: string }[]>(
+      `*[_type == "nekretnina"] { "slug": slug.current, _updatedAt }`
+    ),
+    sanityClient.fetch<{ slug: string; _updatedAt: string }[]>(
+      `*[_type == "oblast"] { "slug": slug.current, _updatedAt }`
+    ),
+    sanityClient.fetch<{ slug: string; _updatedAt: string }[]>(
+      `*[_type == "tipNekretnine"] { "slug": slug.current, _updatedAt }`
+    ),
+  ])
+  return { nekretnine, oblasti, tipovi }
+}

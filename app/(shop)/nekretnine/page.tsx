@@ -3,7 +3,10 @@ import { getFilteredNekretnine, getAllTipovi, getAllOblasti } from '@/lib/sanity
 import PaginatedPropertyGrid from '@/components/shop/PaginatedPropertyGrid'
 import NekretnineFilteri from '@/components/shop/NekretnineFilteri'
 
-export const metadata = { title: 'Sve nekretnine' }
+export const metadata = {
+  title: 'Sve nekretnine',
+  description: 'Pretražite sve dostupne nekretnine u Prijepolju, Zlatiboru i Zlatiborskom okrugu. Stanovi, kuće, placevi i poslovni prostori za kupovinu i iznajmljivanje.',
+}
 
 interface Props {
   searchParams: Promise<{

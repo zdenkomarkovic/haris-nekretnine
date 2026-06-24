@@ -12,6 +12,8 @@ import {
   getAllOblasti,
   getVideoPrezentacije,
 } from "@/lib/sanity/queries";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { SITE_URL, SITE_NAME, PHONE, EMAIL, INSTAGRAM_URL, FACEBOOK_URL } from "@/lib/constants";
 
 export default async function HomePage() {
   const [istaknuteNekretnine, tipovi, oblasti, videoPrezentacije] = await Promise.all([
@@ -23,12 +25,30 @@ export default async function HomePage() {
 
   return (
     <main>
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "RealEstateAgent",
+        name: SITE_NAME,
+        url: SITE_URL,
+        telephone: PHONE,
+        email: EMAIL,
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Prijepolje",
+          addressRegion: "Zlatiborski okrug",
+          addressCountry: "RS",
+        },
+        areaServed: ["Prijepolje", "Zlatibor", "Zlatar", "Zlatiborski okrug", "Srbija"],
+        sameAs: [INSTAGRAM_URL, FACEBOOK_URL],
+        description: "Profesionalna prezentacija nekretnina kroz fotografiju, video sadržaj i digitalni marketing u Zlatiborskom okrugu i Srbiji.",
+      }} />
+
       {/* Hero */}
       <section className="relative text-white h-[calc(100vh-4rem)] overflow-hidden flex flex-col">
         {/* Background image */}
         <img
           src="/hero.png"
-          alt=""
+          alt="Nekretnine u Zlatiborskom okrugu — Haris Nekretnine"
           className="absolute inset-0 w-full h-full object-cover object-right md:object-center"
         />
         {/* Gradient overlay */}
@@ -66,7 +86,7 @@ export default async function HomePage() {
               </p>
               <div className="flex flex-col gap-2 text-base text-white/80">
                 <a
-                  href="tel:+38165277705"
+                  href="tel:+381652777705"
                   className="flex items-center gap-2 hover:text-[#D4AF37] transition-colors"
                 >
                   <span className="flex items-center justify-center w-8 h-8 rounded-full border border-[#D4AF37] text-[#D4AF37] shrink-0">
@@ -83,7 +103,7 @@ export default async function HomePage() {
                       <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z" />
                     </svg>
                   </span>
-                  +381 65 277 705
+                  +381 65 2777705
                 </a>
                 <a
                   href="mailto:haris@berries.rs"
@@ -339,7 +359,7 @@ export default async function HomePage() {
             {/* Kontakt info */}
             <div className="flex flex-col gap-2 text-sm text-gray-700">
               <a
-                href="tel:+38165277705"
+                href="tel:+381652777705"
                 className="flex items-center gap-2 hover:text-green-900 transition-colors"
               >
                 <svg

@@ -14,13 +14,24 @@ export default function OgImage() {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#000',
+        backgroundColor: '#0f2e1a',
         color: '#fff',
         fontFamily: 'sans-serif',
+        padding: '60px',
       }}
     >
-      <div style={{ fontSize: 80, fontWeight: 700, letterSpacing: '-2px' }}>{SITE_NAME}</div>
-      <div style={{ fontSize: 30, color: '#888', marginTop: 20 }}>Online prodavnica</div>
+      <div style={{ fontSize: 22, letterSpacing: '8px', color: '#D4AF37', textTransform: 'uppercase', marginBottom: '24px' }}>
+        invest &amp; rent
+      </div>
+      <div style={{ fontSize: 72, fontWeight: 700, color: '#D4AF37', letterSpacing: '-1px', textAlign: 'center' }}>
+        {SITE_NAME}
+      </div>
+      <div style={{ fontSize: 28, color: '#a3c4a8', marginTop: '24px', textAlign: 'center' }}>
+        Prijepolje · Zlatibor · Zlatar
+      </div>
+      <div style={{ fontSize: 20, color: '#6b9e73', marginTop: '16px' }}>
+        harisnekretnine.rs
+      </div>
     </div>,
     { ...size },
   )

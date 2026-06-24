@@ -1,7 +1,10 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
-export const metadata: Metadata = { title: 'O nama' }
+export const metadata: Metadata = {
+  title: 'O nama',
+  description: 'Haris Nekretnine — moderan brend posvećen profesionalnoj prezentaciji nekretnina kroz fotografiju, video produkciju i digitalni marketing u Zlatiborskom okrugu.',
+}
 
 const stavke = [
   {

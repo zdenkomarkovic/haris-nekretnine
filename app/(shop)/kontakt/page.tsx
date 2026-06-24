@@ -1,7 +1,10 @@
 import type { Metadata } from 'next'
 import KontaktForma from '@/components/kontakt/KontaktForma'
 
-export const metadata: Metadata = { title: 'Kontakt' }
+export const metadata: Metadata = {
+  title: 'Kontakt',
+  description: 'Kontaktirajte Haris Nekretnine — tel. +381652777705. Profesionalna prezentacija i prodaja nekretnina u Prijepolju, Zlatiboru i Zlatiborskom okrugu.',
+}
 
 const socials = [
   {
@@ -55,7 +58,7 @@ export default function KontaktPage() {
             <h2 className="text-lg font-semibold text-green-900 mb-5">Kontakt informacije</h2>
             <div className="space-y-4">
               <a
-                href="tel:+38165277705"
+                href="tel:+381652777705"
                 className="flex items-center gap-4 group"
               >
                 <div className="w-11 h-11 rounded-full bg-green-900 text-white flex items-center justify-center flex-shrink-0 group-hover:bg-[#D4AF37] transition-colors">
