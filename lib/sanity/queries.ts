@@ -1,5 +1,5 @@
 import { sanityClient } from './client'
-import type { TipNekretnine, Nekretnina, Oblast, VideoPrezentacija } from '@/types/shop'
+import type { TipNekretnine, Nekretnina, Oblast, VideoPrezentacija, EdukacijaUnos } from '@/types/shop'
 
 const tipFields = `
   _id,
@@ -226,6 +226,14 @@ export async function getNekretnineWithVideos(limit = 6): Promise<Nekretnina[]> 
   return sanityClient.fetch(
     `*[_type == "nekretnina" && defined(videi) && count(videi) > 0] | order(_createdAt desc) [0..$limit] { ${videoPreviewFields} }`,
     { limit: limit - 1 }
+  )
+}
+
+export async function getAllEdukacija(): Promise<EdukacijaUnos[]> {
+  return sanityClient.fetch(
+    `*[_type == "edukacija"] | order(redosled asc, _createdAt desc) {
+      _id, naslov, tekst, "slike": slike[] { asset, alt }, redosled, _createdAt
+    }`
   )
 }
 

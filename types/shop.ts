@@ -71,6 +71,15 @@ export interface VideoPrezentacija {
   redosled?: number
 }
 
+export interface EdukacijaUnos {
+  _id: string
+  naslov: string
+  tekst?: PortableTextBlock[]
+  slike?: SanityImage[]
+  redosled?: number
+  _createdAt: string
+}
+
 export interface InquiryFormData {
   ime: string
   prezime: string

@@ -39,6 +39,7 @@ export default function MobileMenu({ showOblasti, showTipovi }: Props) {
               <Link href="/tipovi" className="hover:text-[#D4AF37] transition-colors">Tipovi</Link>
             )}
             <Link href="/nekretnine" className="hover:text-[#D4AF37] transition-colors">Sve nekretnine</Link>
+            <Link href="/edukacija" className="hover:text-[#D4AF37] transition-colors">Edukacija</Link>
             <Link href="/o-nama" className="hover:text-[#D4AF37] transition-colors">O nama</Link>
             <Link href="/kontakt" className="hover:text-[#D4AF37] transition-colors">Kontakt</Link>
             <FavoritesLink />

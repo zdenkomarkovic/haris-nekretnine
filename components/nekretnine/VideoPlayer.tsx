@@ -30,7 +30,13 @@ export default function VideoPlayer({ video, autoPlay = false }: { video: Video;
   if (video.tip === 'fajl') {
     if (!video.fajlUrl) return null
     return (
-      <video controls autoPlay={autoPlay} className="w-full rounded-lg bg-black" src={video.fajlUrl} preload="metadata">
+      <video
+        controls
+        autoPlay={autoPlay}
+        className="block mx-auto max-h-[85vh] max-w-full w-auto h-auto rounded-lg bg-black"
+        src={video.fajlUrl}
+        preload="metadata"
+      >
         Vaš pretraživač ne podržava video.
       </video>
     )

@@ -139,7 +139,7 @@ export default function HomepageVideos({ videi }: { videi: VideoPrezentacija[] }
           )}
 
           <div
-            className={`w-full mx-6 ${activeVideo.tip === 'instagram' ? 'max-w-lg' : 'max-w-4xl'}`}
+            className={`w-full mx-6 max-h-[90vh] overflow-hidden ${activeVideo.tip === 'instagram' ? 'max-w-lg' : 'max-w-4xl'}`}
             onClick={(e) => e.stopPropagation()}
           >
             {activeVideo.tip === 'instagram' && activeVideo.url ? (
