@@ -1,12 +1,14 @@
 export const revalidate = 60
 
 import { getAllOblasti } from '@/lib/sanity/queries'
+import { buildMetadata } from '@/lib/metadata'
 import OblastList from '@/components/shop/OblastList'
 
-export const metadata = {
+export const metadata = buildMetadata({
   title: 'Oblasti',
   description: 'Istražite nekretnine po oblastima — Prijepolje, Zlatibor, Zlatar i sve lokacije u Zlatiborskom okrugu. Pronađite idealnu nekretninu na željenom mestu.',
-}
+  url: '/oblasti',
+})
 
 export default async function OblastiPage() {
   const oblasti = await getAllOblasti()

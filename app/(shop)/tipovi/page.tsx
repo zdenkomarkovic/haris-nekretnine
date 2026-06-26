@@ -1,12 +1,14 @@
 export const revalidate = 60
 
 import { getAllTipovi } from '@/lib/sanity/queries'
+import { buildMetadata } from '@/lib/metadata'
 import TipList from '@/components/shop/CategoryList'
 
-export const metadata = {
+export const metadata = buildMetadata({
   title: 'Tipovi nekretnina',
   description: 'Pretražite nekretnine po tipu — stanovi, kuće, vikendice, placevi, poslovni prostori i više. Haris Nekretnine nudi širok izbor u Zlatiborskom okrugu.',
-}
+  url: '/tipovi',
+})
 
 export default async function TipoviStranica() {
   const tipovi = await getAllTipovi()

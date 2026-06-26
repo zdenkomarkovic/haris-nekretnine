@@ -1,12 +1,14 @@
 import { Suspense } from 'react'
 import { getFilteredNekretnine, getAllTipovi, getAllOblasti } from '@/lib/sanity/queries'
+import { buildMetadata } from '@/lib/metadata'
 import PaginatedPropertyGrid from '@/components/shop/PaginatedPropertyGrid'
 import NekretnineFilteri from '@/components/shop/NekretnineFilteri'
 
-export const metadata = {
+export const metadata = buildMetadata({
   title: 'Sve nekretnine',
   description: 'Pretražite sve dostupne nekretnine u Prijepolju, Zlatiboru i Zlatiborskom okrugu. Stanovi, kuće, placevi i poslovni prostori za kupovinu i iznajmljivanje.',
-}
+  url: '/nekretnine',
+})
 
 interface Props {
   searchParams: Promise<{

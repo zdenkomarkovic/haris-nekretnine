@@ -1,10 +1,11 @@
-import type { Metadata } from 'next'
 import KontaktForma from '@/components/kontakt/KontaktForma'
+import { buildMetadata } from '@/lib/metadata'
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: 'Kontakt',
   description: 'Kontaktirajte Haris Nekretnine — tel. +381652777705. Profesionalna prezentacija i prodaja nekretnina u Prijepolju, Zlatiboru i Zlatiborskom okrugu.',
-}
+  url: '/kontakt',
+})
 
 const socials = [
   {

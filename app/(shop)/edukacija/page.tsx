@@ -1,12 +1,14 @@
 export const revalidate = 60
 
 import { getAllEdukacija } from '@/lib/sanity/queries'
+import { buildMetadata } from '@/lib/metadata'
 import EdukacijaLista from '@/components/edukacija/EdukacijaLista'
 
-export const metadata = {
+export const metadata = buildMetadata({
   title: 'Edukacija',
   description: 'Saveti, vodiči i korisne informacije o kupovini, prodaji i iznajmljivanju nekretnina u Srbiji. Edukativni sadržaj agencije Haris Nekretnine.',
-}
+  url: '/edukacija',
+})
 
 export default async function EdukacijaPage() {
   const unosi = await getAllEdukacija()

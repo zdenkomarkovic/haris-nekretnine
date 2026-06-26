@@ -42,11 +42,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (nekretnina.cena != null) parts.push(`${nekretnina.cena.toLocaleString('sr-RS')} EUR`)
   if (nekretnina.lokacija) parts.push(nekretnina.lokacija)
 
+  const coverImage = nekretnina.slike?.[0]
+    ? urlFor(nekretnina.slike[0].asset).width(1200).height(630).url()
+    : undefined
+
   return buildMetadata({
     title: nekretnina.name,
     description: parts.join(' — '),
     url: `/nekretnine/${slug}`,
     type: 'website',
+    ...(coverImage && { image: coverImage }),
   })
 }
 

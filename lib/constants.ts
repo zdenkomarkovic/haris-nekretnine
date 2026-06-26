@@ -5,7 +5,7 @@ export const SITE_NAME =
   process.env.NEXT_PUBLIC_SITE_NAME ?? "Haris Nekretnine";
 
 export const SITE_DESCRIPTION =
-  "Haris Nekretnine — profesionalna prezentacija nekretnina u Prijepolju, Zlatiboru i Zlatiboru. Kupovina, prodaja i iznajmljivanje nekretnina u Zlatiborskom okrugu i Srbiji.";
+  "Haris Nekretnine — profesionalna prezentacija nekretnina u Prijepolju, Zlatiboru i Zlataru. Kupovina, prodaja i iznajmljivanje nekretnina u Zlatiborskom okrugu i Srbiji.";
 
 export const PHONE = "+381652777705";
 export const EMAIL = "haris@berries.rs";
